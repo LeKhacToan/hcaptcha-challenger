@@ -14,7 +14,6 @@ from loguru import logger
 from selenium.common.exceptions import WebDriverException
 from undetected_chromedriver import Chrome, ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager, ChromeType
-from webdriver_manager.core.utils import get_browser_version_from_os
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -147,7 +146,7 @@ def get_challenge_ctx(
     # - Requirement: undetected-chromedriver >= 3.1.5.post2
     logging.getLogger("WDM").setLevel(logging.NOTSET)
     driver_executable_path = ChromeDriverManager().install()
-    version_main = get_browser_version_from_os(ChromeType.GOOGLE).split(".")[0]
+    version_main = None
 
     logger.debug("🎮 Activate challenger context")
     try:

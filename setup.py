@@ -24,11 +24,11 @@ setup(
     packages=find_packages(include=["hcaptcha_challenger", "hcaptcha_challenger.*", "LICENSE"]),
     install_requires=[
         "loguru~=0.6.0",
-        "selenium~=4.4.3",
+        "selenium~=4.10.0",
         "aiohttp~=3.8.3",
         "opencv-python~=4.5.5.62",
         "undetected-chromedriver==3.1.5.post4",
-        "webdriver-manager==3.8.2",
+        "webdriver-manager==3.9.1",
         "numpy>=1.21.5",
         "requests>=2.28.1",
         "pyyaml~=6.0",
